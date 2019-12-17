@@ -7,6 +7,11 @@ const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'app/public')));
+app.use(express.urlencoded({ extended: true }));
+
+require('./app/routing/htmlroutes.js')(app);
+
 setInterval(function () {
     app.get("https://polar-ridge-50259.herokuapp.com/");
     console.log("Preventing idle")
