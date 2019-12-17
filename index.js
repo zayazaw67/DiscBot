@@ -7,11 +7,16 @@ client.once('ready', () => {
     console.log("Ready!")
 });
 
+// 656573848895881247 ali cat butt id
+// 656574546945507369 test cat butt id
+
 
 client.on('message', (message) => {
 
-    if (message.content !== '' && user.name == "bumble" || "zaya") {
-        message.react("💩");
+    if (message.content !== '' /*&& user.name == "bumble" || "zaya"*/) {
+        // message.react("💩");
+        let emoji = message.guild.emojis.find(emoji => emoji.name ==="KBT112");
+        message.react(emoji);
     };
 });
 
