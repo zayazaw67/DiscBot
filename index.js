@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 // const { token } = require('./config.json');
 const user = require('./users.json');
 const client = new Discord.Client();
+var server = process.env.PORT || 8080;
 
 client.once('ready', () => {
     console.log("Ready!")
