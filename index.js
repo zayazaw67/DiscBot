@@ -6,15 +6,16 @@ const client = new Discord.Client();
 const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
-const path = require('path');
+const http = require("http");
+// const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'app/public')));
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.static(path.join(__dirname, 'app/public')));
+// app.use(express.urlencoded({ extended: true }));
 
-require('./app/routing/htmlroutes.js')(app);
+// require('./app/routing/htmlroutes.js')(app);
 
 setInterval(function () {
-    app.get("https://polar-ridge-50259.herokuapp.com/");
+    http.get("https://polar-ridge-50259.herokuapp.com/");
     console.log("Preventing idle")
 }, 300000); // every 5 minutes (300000)
 
