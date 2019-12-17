@@ -11,5 +11,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zaya",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zayazaw67/DiscBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zayazaw67/DiscBot/issues"
+  },
+  "homepage": "https://github.com/zayazaw67/DiscBot#readme"
 }
