@@ -7,11 +7,10 @@ const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-var http = require("http");
 setInterval(function () {
-    http.get("https://polar-ridge-50259.herokuapp.com/");
+    app.get("https://polar-ridge-50259.herokuapp.com/");
     console.log("Preventing idle")
-}, 300000); // every 5 minutes (300000)
+}, 10000); // every 5 minutes (300000)
 
 client.once('ready', () => {
     console.log("Ready!")
