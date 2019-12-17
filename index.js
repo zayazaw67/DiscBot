@@ -7,9 +7,6 @@ client.once('ready', () => {
     console.log("Ready!")
 });
 
-// 656573848895881247 ali cat butt id
-// 656574546945507369 test cat butt id
-
 
 client.on('message', (message) => {
 
