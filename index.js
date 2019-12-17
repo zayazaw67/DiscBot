@@ -18,4 +18,6 @@ client.on('message', (message) => {
     };
 });
 
+server.listen(process.env.PORT || 5000)
+
 client.login();
