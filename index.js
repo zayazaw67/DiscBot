@@ -18,4 +18,5 @@ client.on('message', (message) => {
     };
 });
 
+socket = io.listen(process.env.PORT);
 client.login();
