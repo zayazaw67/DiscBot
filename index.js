@@ -10,7 +10,7 @@ const app = express();
 setInterval(function () {
     app.get("https://polar-ridge-50259.herokuapp.com/");
     console.log("Preventing idle")
-}, 10000); // every 5 minutes (300000)
+}, 300000); // every 5 minutes (300000)
 
 client.once('ready', () => {
     console.log("Ready!")
