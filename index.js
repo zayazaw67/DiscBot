@@ -1,3 +1,4 @@
+const nr = require('newrelic');
 require('dotenv').config();
 const Discord = require('discord.js');
 // const { token } = require('./config.json');
@@ -14,9 +15,12 @@ app.use(express.urlencoded({ extended: true }));
 require('./app/routing/htmlroutes.js')(app);
 
 setInterval(function () {
-    app.get("https://polar-ridge-50259.herokuapp.com/");
-    console.log("Preventing idle")
-}, 300000); // every 5 minutes (300000)
+    app.get("/", function (req, res) {
+        res.send("Preventing idle")
+        console.log("Preventing idle")
+    });
+    // console.log("Preventing idle")
+}, 5000); // every 5 minutes (300000)
 
 client.once('ready', () => {
     console.log("Ready!")
