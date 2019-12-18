@@ -21,7 +21,7 @@ client.on('message', (message) => {
         let emoji = message.guild.emojis.find(emoji => emoji.name === "KBT112");
         message.react(emoji);
     };
-    if (message.content !== '' && user.name == "kevin") {
+    if (message.content !== '' && user.name === "kevin") {
         message.react("💩");
     }
 });
