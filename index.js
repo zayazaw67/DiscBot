@@ -24,7 +24,6 @@ client.on('message', (message) => {
     if (message.content !== '' && user.name == "kevin") {
         message.react("💩");
     }
-
 });
 
 app.listen(PORT, function () {
