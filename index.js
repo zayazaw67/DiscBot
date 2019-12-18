@@ -6,18 +6,17 @@ const client = new Discord.Client();
 const express = require("express");
 const PORT = process.env.PORT || 8080;
 const app = express();
+const http = require("http");
 
-setInterval(function () {
-    app.get("https://polar-ridge-50259.herokuapp.com/");
-    console.log("Preventing idle")
-}, 15000); // every 5 minutes (300000)
+setInterval(function() {
+    http.get("http://polar-ridge-50259.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
 
 client.once('ready', () => {
     console.log("Ready!")
 });
 
 client.on('message', (message) => {
-
     if (message.content !== '' /*&& user.name == "bumble" || "zaya"*/) {
         // message.react("💩");
         let emoji = message.guild.emojis.find(emoji => emoji.name === "KBT112");
