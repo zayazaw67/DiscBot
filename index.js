@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 const http = require("http");
 
-setInterval(function() {
+setInterval(function () {
     http.get("http://polar-ridge-50259.herokuapp.com");
 }, 300000); // every 5 minutes (300000)
 
@@ -17,11 +17,14 @@ client.once('ready', () => {
 });
 
 client.on('message', (message) => {
-    if (message.content !== '' /*&& user.name == "bumble" || "zaya"*/) {
-        // message.react("💩");
+    if (message.content !== '' || message.attachments.size > 0) {
         let emoji = message.guild.emojis.find(emoji => emoji.name === "KBT112");
         message.react(emoji);
     };
+    if (message.content !== '' && user.name == "kevin") {
+        message.react("💩");
+    }
+
 });
 
 app.listen(PORT, function () {
