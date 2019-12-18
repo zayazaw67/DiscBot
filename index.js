@@ -14,12 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 require('./app/routing/htmlroutes.js')(app);
 
 setInterval(function () {
-    app.get("/", function (req, res) {
+    app.get("https://polar-ridge-50259.herokuapp.com/", function (req, res) {
         res.send("Preventing idle")
         console.log("Preventing idle")
     });
     console.log("Preventing idle")
-}, 5000); // every 5 minutes (300000)
+}, 15000); // every 5 minutes (300000)
 
 client.once('ready', () => {
     console.log("Ready!")
