@@ -1,4 +1,3 @@
-const nr = require('newrelic');
 require('dotenv').config();
 const Discord = require('discord.js');
 // const { token } = require('./config.json');
