@@ -1,7 +1,6 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 // const { token } = require('./config.json');
-const user = require('./users.json');
 const client = new Discord.Client();
 const express = require("express");
 const PORT = process.env.PORT || 8080;
@@ -21,8 +20,9 @@ client.on('message', (message) => {
         let emoji = message.guild.emojis.find(emoji => emoji.name === "KBT112");
         message.react(emoji);
     };
-    if (message.content !== '' && user.name === "kevin") {
-        message.react("💩");
+    if (message.author.id == "538084283387084801") {
+        let catEyesOne = message.guild.emojis.find(emoji => emoji.name === "emoji_7");
+        message.react(catEyesOne);
     }
 });
 
