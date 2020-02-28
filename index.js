@@ -20,9 +20,12 @@ client.on('message', (message) => {
         let emoji = message.guild.emojis.find(emoji => emoji.name === "KBT112");
         message.react(emoji);
     };
-    if (message.author.id == "538084283387084801") {
+    if (message.author.id == "538084283387084801") {            // autorespond cat to ali
         let catEyesOne = message.guild.emojis.find(emoji => emoji.name === "emoji_7");
         message.react(catEyesOne);
+    }
+    if (message.author.id =="130637781591523328") {             // autorespond poop to necro
+        message.react("💩");
     }
 });
 
